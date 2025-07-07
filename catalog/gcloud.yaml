@@ -10,5 +10,7 @@ steps:
 serviceAccount: $SERVICE_ACCOUNT
 options:
   logging: CLOUD_LOGGING_ONLY
-substitutions:
-  _GCLOUD_AUTH_COMMAND: 'test'
+# substitutions:
+#   _GCLOUD_AUTH_COMMAND: 'test'
+options:
+  substitution_option: ALLOW_LOOSE
