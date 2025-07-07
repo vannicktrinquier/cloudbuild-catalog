@@ -1,0 +1,12 @@
+steps:
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        echo "Executing: gcloud $_GCLOUD_AUTH_COMMAND"
+        gcloud $_GCLOUD_AUTH_COMMAND
+    id: "gcloud-command"
+serviceAccount: "__GCLOUD_AUTH_SERVICE_ACCOUNT"
+options:
+  logging: CLOUD_LOGGING_ONLY
