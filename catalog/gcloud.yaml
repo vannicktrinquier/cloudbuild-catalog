@@ -7,10 +7,7 @@ steps:
         echo "Executing: gcloud $_GCLOUD_AUTH_COMMAND"
         gcloud $_GCLOUD_AUTH_COMMAND
     id: "gcloud-command"
-# serviceAccount: $SERVICE_ACCOUNT
 options:
   logging: CLOUD_LOGGING_ONLY
-# substitutions:
-#   _GCLOUD_AUTH_COMMAND: 'test'
 options:
   substitution_option: ALLOW_LOOSE
